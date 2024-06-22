@@ -1,4 +1,3 @@
-import "./SearchResultsList.css";
 import { SearchResult } from "./SearchResult";
 
 export const SearchResultsList = ({ results }) => {
