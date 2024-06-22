@@ -1,17 +1,19 @@
-import { useState } from "react";
+import { useState } from 'react';
 
-import "./App.css";
-import { SearchBar } from "./components/SearchBar";
-import { SearchResultsList } from "./components/SearchResultsList";
+import './App.css';
+import { SearchBar } from './components/SearchBar';
+import { SearchResultsList } from './components/SearchResultsList';
 
 function App() {
   const [results, setResults] = useState([]);
 
   return (
-    <div className="App">
-      <div className="search-bar-container">
+    <div className="bg-[#eee] w-screen h-screen">
+      <div className="pt-[20vh] w-2/5 mx-auto flex flex-col items-center min-w-[200px]">
         <SearchBar setResults={setResults} />
-        {results && results.length > 0 && <SearchResultsList results={results} />}
+        {results && results.length > 0 && (
+          <SearchResultsList results={results} />
+        )}
       </div>
     </div>
   );
